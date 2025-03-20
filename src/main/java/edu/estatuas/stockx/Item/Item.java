@@ -8,6 +8,7 @@ public interface Item {
     int getAsk();
     int getBid();
     int getSale();
+    String getStyle();
     void setBid(int bid);
     void setAsk(int ask);
     void add(Offer offer);

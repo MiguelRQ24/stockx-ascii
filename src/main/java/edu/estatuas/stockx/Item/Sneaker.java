@@ -29,6 +29,11 @@ public class Sneaker implements Item {
     }
 
     @Override
+    public String getStyle() {
+        return style;
+    }
+
+    @Override
     public int getAsk() {
         return ask;
     }
