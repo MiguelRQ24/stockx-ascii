@@ -6,6 +6,7 @@ import edu.estatuas.stockx.Item.Sneaker;
 import edu.estatuas.stockx.Offer.Ask;
 import edu.estatuas.stockx.Offer.Bid;
 import edu.estatuas.stockx.Offer.Offer;
+import edu.estatuas.stockx.Offer.Sale;
 import edu.estatuas.stockx.criteria.*;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class Stockx {
 
     public static void main(String[] args) {
 
-        /**
+        /*
          * Crear la zapatilla
          * y printar sus datos.
          *
@@ -44,7 +45,7 @@ public class Stockx {
         Item sneaker = new Sneaker("555088-105", "Jordan 1 Retro High Dark Mocha");
         System.out.println(Stockx.draw(sneaker));
 
-        /**
+        /*
          * Crear bids
          * y añadirlas a la zapatilla
          * en sus offers.
@@ -56,7 +57,7 @@ public class Stockx {
         sneaker.add(new Bid("9.5", 479));
         sneaker.add(new Bid("13", 338));
         sneaker.add(new Bid("9.5", 4800));
-        /**
+        /*
          * Crear el filtro "Bids" que filtra
          * solo las bids de entre las
          * offers de la zapatilla.
@@ -66,7 +67,7 @@ public class Stockx {
         System.out.println("\n\t\t All BIDS");
         bids.checkCriteria(sneaker).forEach(System.out::print);
 
-        /**
+        /*
          * Crear asks
          * y añadirlas a la zapatilla
          * en sus offers.
@@ -89,7 +90,7 @@ public class Stockx {
         System.out.println("\n\t\t All ASKS");
         asks.checkCriteria(sneaker).forEach(System.out::print);
 
-        /**
+        /*
          * Muestra la bid maxima
          * de la zapatilla.
          *
@@ -110,7 +111,7 @@ public class Stockx {
         System.out.println(Stockx.draw(sneaker));
 
 
-        /**
+        /*
          * Muestra la ask minima
          * de la zapatilla.
          *
@@ -129,6 +130,31 @@ public class Stockx {
         System.out.println(minimum.get(1).value());
         System.out.println(minimum.get(2).value());
         System.out.println(Stockx.draw(sneaker));
+
+        /*
+         * Añade ventas (sales) de
+         * una zapatilla a sus offers.
+         * Las ventas se añaden segun fecha
+         * en la que se producen, de mas antigua
+         * a mas reciente.
+         */
+
+        Sale sale = new Sale("6", 356);
+        sneaker.add(sale);
+        sneaker.add(new Sale("9.5", 352));
+        sneaker.add(new Sale("9.5", 404));
+        sneaker.add(new Sale("13", 360));
+        sneaker.add(new Sale("13", 372));
+
+        /*
+         * Crear el filtro "Sales" que filtra
+         * solo las ventas /sales de entre las
+         * offers de la zapatilla.
+         */
+
+        Criteria sales = new Sales();
+        System.out.println("\n\t\t All SALES");
+        sales.checkCriteria(sneaker).forEach(System.out::print);
     }
     public static String draw(Item sneaker) {
         return
