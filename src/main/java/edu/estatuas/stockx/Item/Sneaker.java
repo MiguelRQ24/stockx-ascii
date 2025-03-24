@@ -29,6 +29,11 @@ public class Sneaker implements Item {
     }
 
     @Override
+    public void setSale(int sale) {
+        this.sale = sale;
+    }
+
+    @Override
     public String getStyle() {
         return style;
     }

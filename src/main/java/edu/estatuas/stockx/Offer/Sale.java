@@ -10,8 +10,13 @@ public class Sale implements Offer{
     }
 
     @Override
+    public String size() {
+        return getSize();
+    }
+
+    @Override
     public int value() {
-        return price;
+        return getPrice();
     }
 
     @Override
@@ -22,5 +27,13 @@ public class Sale implements Offer{
     @Override
     public String toString() {
         return "\t\t" + size + "\t\t" + price + "\n";
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public String getSize() {
+        return size;
     }
 }

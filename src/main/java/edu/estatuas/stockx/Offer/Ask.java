@@ -10,7 +10,12 @@ public class Ask implements Offer{
 
     @Override
     public int value() {
-        return ask;
+        return getAsk();
+    }
+
+    @Override
+    public String size() {
+        return getSize();
     }
 
     @Override
@@ -20,6 +25,14 @@ public class Ask implements Offer{
 
     @Override
     public int compareTo(Offer offer){
-        return value() - offer.value() ;
+        return offer.value() - value();
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public Integer getAsk() {
+        return ask;
     }
 }
