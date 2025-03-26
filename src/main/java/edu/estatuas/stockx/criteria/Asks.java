@@ -1,8 +1,8 @@
 package edu.estatuas.stockx.criteria;
 
-import edu.estatuas.stockx.Offer.Ask;
-import edu.estatuas.stockx.Item.Item;
-import edu.estatuas.stockx.Offer.Offer;
+import edu.estatuas.stockx.offer.Ask;
+import edu.estatuas.stockx.item.Item;
+import edu.estatuas.stockx.offer.Offer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,8 @@ public class Asks implements Criteria{
                 offers.add(offer);
             }
         }
-        return offers;
+        offers.sort(Offer::compareTo);
+        return offers.reversed();
     }
 
 }
