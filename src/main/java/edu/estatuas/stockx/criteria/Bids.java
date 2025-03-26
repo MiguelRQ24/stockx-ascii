@@ -1,8 +1,8 @@
 package edu.estatuas.stockx.criteria;
 
-import edu.estatuas.stockx.Offer.Bid;
-import edu.estatuas.stockx.Item.Item;
-import edu.estatuas.stockx.Offer.Offer;
+import edu.estatuas.stockx.offer.Bid;
+import edu.estatuas.stockx.item.Item;
+import edu.estatuas.stockx.offer.Offer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ public class Bids implements Criteria{
                 offers.add(offer);
             }
         }
+        offers.sort(Offer::compareTo);
         return offers;
     }
 
