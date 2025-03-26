@@ -1,8 +1,8 @@
-package edu.estatuas.stockx.Offer;
+package edu.estatuas.stockx.offer;
 
 public class Bid implements Offer{
-    private String size;
-    private Integer bid;
+    private final String size;
+    private final Integer bid;
     public Bid(String size, int bid){
         this.size = size;
         this.bid = bid;

@@ -1,4 +1,4 @@
-package edu.estatuas.stockx.Offer;
+package edu.estatuas.stockx.offer;
 
 public class Sale implements Offer{
     private String size;

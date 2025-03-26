@@ -1,12 +1,12 @@
 package edu.estatuas.stockx;
 
 
-import edu.estatuas.stockx.Item.Item;
-import edu.estatuas.stockx.Item.Sneaker;
-import edu.estatuas.stockx.Offer.Ask;
-import edu.estatuas.stockx.Offer.Bid;
-import edu.estatuas.stockx.Offer.Offer;
-import edu.estatuas.stockx.Offer.Sale;
+import edu.estatuas.stockx.item.Item;
+import edu.estatuas.stockx.item.Sneaker;
+import edu.estatuas.stockx.offer.Ask;
+import edu.estatuas.stockx.offer.Bid;
+import edu.estatuas.stockx.offer.Offer;
+import edu.estatuas.stockx.offer.Sale;
 import edu.estatuas.stockx.criteria.*;
 
 import java.util.List;

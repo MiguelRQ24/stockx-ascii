@@ -1,8 +1,8 @@
 package edu.estatuas.stockx.criteria;
 
-import edu.estatuas.stockx.Item.Item;
-import edu.estatuas.stockx.Offer.Offer;
-import edu.estatuas.stockx.Offer.Sale;
+import edu.estatuas.stockx.item.Item;
+import edu.estatuas.stockx.offer.Offer;
+import edu.estatuas.stockx.offer.Sale;
 
 import java.util.ArrayList;
 import java.util.List;

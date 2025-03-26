@@ -1,6 +1,6 @@
-package edu.estatuas.Item;
+package edu.estatuas.item;
 
-import edu.estatuas.stockx.Item.Sneaker;
+import edu.estatuas.stockx.item.Sneaker;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
